@@ -17,6 +17,10 @@ A high-performance solution for **large-scale data operations** built with **Exp
 ---
 
 ## Architecture Overview
+
+![image](https://github.com/user-attachments/assets/fd91db97-ae1a-41c0-be04-c5afd85fe8ff)
+
+
 This platform is designed to handle high-volume bulk operations (like uploading and processing contact data) in a reliable, scalable, and fault-tolerant way. It uses microservices architecture, event-driven communication via Kafka, distributed caching, object storage, and MongoDB for metadata and entity management.
 
 
