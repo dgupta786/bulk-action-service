@@ -132,6 +132,7 @@ Enables precise timing control for operations to support business needs like off
 ## API Testing Resources
 
 A complete Postman collection is available for testing all endpoints.
+https://github.com/dgupta786/bulk-action-service/blob/main/Bulk%20Action%20APIs.postman_collection.json
 
 ---
 
