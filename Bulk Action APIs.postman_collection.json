@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "232f91c3-ddc0-4d97-aa9b-3adad2d9afa6",
+		"name": "Bulk Action API",
+		"description": "This collection contains all endpoints for the Bulk Action API. It allows users to create, track, and retrieve details about bulk action operations.  \n\nEndpoints:\n\n- POST /bulk-actions - Create a new bulk action.\n    \n- GET /bulk-actions - Retrieve all bulk actions.\n    \n- GET /bulk-actions/{actionId} - Get details of a specific bulk action.\n    \n- GET /bulk-actions/{actionId}/stats - Retrieve processing statistics for a bulk action.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45893772"
+	},
+	"item": [
+		{
+			"name": "bulk-actions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "actionType",
+							"value": "BULK_UPDATE",
+							"description": "Bulk action type being performed",
+							"type": "text"
+						},
+						{
+							"key": "entityType",
+							"value": "Contact",
+							"description": "Entity Type that bulk action is being performed on",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"description": "CSV File attachment containing bulk action items",
+							"type": "file",
+							"src": "/Users/d0d0dr1/Desktop/bulk_update.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/bulk-actions",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bulk-actions"
+					]
+				},
+				"description": "Creates and executes a new bulk action in the system."
+			},
+			"response": []
+		},
+		{
+			"name": "bulk-actions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/bulk-actions",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bulk-actions"
+					]
+				},
+				"description": "Lists all the bulk actions in DB"
+			},
+			"response": []
+		},
+		{
+			"name": "bulk-actions/{actionId}",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/bulk-actions/6852ca2339faa3fab622503c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bulk-actions",
+						"6852ca2339faa3fab622503c"
+					]
+				},
+				"description": "Retrieves the details about the bulk action from DB"
+			},
+			"response": []
+		},
+		{
+			"name": "bulk-actions/{actionId}/stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/bulk-actions/6852ca2339faa3fab622503c/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bulk-actions",
+						"6852ca2339faa3fab622503c",
+						"stats"
+					]
+				},
+				"description": "Get Bulk Action by actionId"
+			},
+			"response": []
+		}
+	]
+}
