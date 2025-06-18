@@ -237,7 +237,7 @@ A complete Postman collection is available for testing all endpoints.
 
 ### Repository Setup
 ```
-git clone https://github.com/your-username/bulk-action-service.git
+git clone https://github.com/dgupta786/bulk-action-service.git
 cd bulk-action-service
 ```
 
