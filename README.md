@@ -235,7 +235,7 @@ git clone https://github.com/dgupta786/bulk-action-service.git
 cd bulk-action-service
 ```
 
-### Dependency Installation
+### Dependency Installation (Node.js v16)
 ```
 npm install
 ```
