@@ -151,8 +151,9 @@ A complete Postman collection is available for testing all endpoints.
 **Response:**
 ```
 {
-  "message": "Bulk action created successfully",
-  "actionId": "67ba088574f9b11946038c7f"
+    "actionId": "6853022036be030cdf6728eb",
+    "status": "QUEUED",
+    "message": "Success! Your bulk action has been queued for processing."
 }
 ```
 
@@ -163,40 +164,28 @@ A complete Postman collection is available for testing all endpoints.
 ```
 [
     {
-        "actionId": "67bb2f5f47fd3489bc8ba0c8",
+        "actionId": "6853125fb5f7146ba8e71fc7",
         "actionType": "BULK_UPDATE",
         "entityType": "Contact",
         "status": "COMPLETED",
-        "totalCount": 1500,
-        "processedCount": 1500,
+        "totalCount": 3510,
+        "processedCount": 3510,
         "successCount": 0,
         "failureCount": 0,
         "skippedCount": 0,
-        "createdAt": "2025-02-23T14:23:27.180Z"
+        "createdAt": "2025-06-18T19:24:15.835Z"
     },
     {
-        "actionId": "67bb2ebd47fd3489bc8ba0bd",
+        "actionId": "6853022036be030cdf6728eb",
         "actionType": "BULK_UPDATE",
         "entityType": "Contact",
-        "status": "PROCESSING",
-        "totalCount": 2500,
-        "processedCount": 1500,
-        "successCount": 1500,
-        "failureCount": 0,
-        "skippedCount": 0,
-        "createdAt": "2025-02-23T14:20:45.463Z"
-    },
-    {
-        "actionId": "67bb2be247fd3489bc8ba0b2",
-        "actionType": "BULK_UPDATE",
-        "entityType": "Contact",
-        "status": "QUEUED",
-        "totalCount": 1500,
-        "processedCount": 0,
+        "status": "COMPLETED",
+        "totalCount": 3510,
+        "processedCount": 3510,
         "successCount": 0,
         "failureCount": 0,
         "skippedCount": 0,
-        "createdAt": "2025-02-23T14:08:34.089Z"
+        "createdAt": "2025-06-18T18:14:56.821Z"
     }
 ]
 ```
@@ -207,16 +196,16 @@ A complete Postman collection is available for testing all endpoints.
 **Response Sample:**
 ```
 {
-    "actionId": "67bb2f5f47fd3489bc8ba0c8",
+    "actionId": "6853022036be030cdf6728eb",
     "actionType": "BULK_UPDATE",
     "entityType": "Contact",
     "status": "COMPLETED",
-    "totalCount": 1500,
-    "processedCount": 1500,
+    "totalCount": 3510,
+    "processedCount": 3510,
     "successCount": 0,
     "failureCount": 0,
     "skippedCount": 0,
-    "createdAt": "2025-02-23T14:23:27.180Z"
+    "createdAt": "2025-06-18T18:14:56.821Z"
 }
 ```
 
@@ -226,9 +215,9 @@ A complete Postman collection is available for testing all endpoints.
 **Response Sample:**
 ```
 {
-    "actionId": "67bb2f5f47fd3489bc8ba0c8",
-    "totalCount": 1500,
-    "processedCount": 1500,
+    "actionId": "6853022036be030cdf6728eb",
+    "totalCount": 3510,
+    "processedCount": 3510,
     "successCount": 0,
     "failureCount": 0,
     "skippedCount": 0
