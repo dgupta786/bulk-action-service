@@ -3,6 +3,7 @@ import app from './app';
 import * as http from 'http';
 import MongoDBConnectionService from "./service/db/database.service";
 import { startBulkUpdateConsumer } from "./service/kafka/consumer.service";
+import { startDLQConsumer } from "./service/kafka/dlqConsumer.service";
 
 const { port } = serverConfig;
 
@@ -21,6 +22,10 @@ server.listen(port, async () => {
         // Start message processing consumer
         startBulkUpdateConsumer();
         console.log('✅ Kafka consumer initialized');
+        
+        // Start DLQ retry consumer
+        startDLQConsumer();
+        console.log('✅ DLQ consumer initialized');
     } catch (error) {
         console.error('❌ Service initialization failed:', error);
         process.exit(1);

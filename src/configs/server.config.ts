@@ -12,6 +12,8 @@ interface ServerConfig {
   kafka: {
     broker: string | undefined;
     topic: string | undefined;
+    dlqTopic?: string | undefined;
+    retryCOunt?: number;
   };
   redis: {
     uri: string | undefined;
@@ -30,6 +32,8 @@ const serverConfig: ServerConfig = {
   kafka: {
     broker: process.env.KAFKA_BROKER,
     topic: process.env.KAFKA_TOPIC,
+    dlqTopic: `${process.env.KAFKA_TOPIC}.DLQ`,
+    retryCOunt: toNumber(process.env.KAFKA_RETRY_COUNT) || 3
   },
   redis: {
     uri: process.env.REDIS_URI
