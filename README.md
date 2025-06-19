@@ -63,7 +63,7 @@ The architecture enables seamless submission, processing, and monitoring of bulk
 
 ## Enterprise Capabilities
 
-### Throughput Control System (Implemented)
+### Rate Limiting with accountId (Implemented)
 
 A sophisticated traffic management layer protects system resources and ensures equitable usage across enterprise customers.
 
