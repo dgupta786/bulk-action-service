@@ -78,7 +78,7 @@ A sophisticated traffic management layer protects system resources and ensures e
 - Self-healing counters with automatic expiration to optimize memory utilization
 - Environment-specific configuration supporting different SLAs per deployment
 
-### Intelligent Deduplication Engine (Proposed Design)
+### Duplicate Email-ID check before DB action (Proposed Design)
 
 Automated detection and handling of duplicate records using distributed data structures for maximum efficiency.
 
@@ -94,7 +94,7 @@ Automated detection and handling of duplicate records using distributed data str
 - Full audit capabilities through comprehensive logging of skipped records
 - Negligible performance overhead through optimized Redis operations
 
-### Time-Targeted Processing (Proposed Design)
+### Scheduling Service (Proposed Design)
 
 Enables precise timing control for operations to support business needs like off-hours processing and coordinated campaigns.
 
