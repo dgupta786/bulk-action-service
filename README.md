@@ -61,6 +61,17 @@ The architecture enables seamless submission, processing, and monitoring of bulk
 
 ---
 
+## Kafka Retry Mechanism (DLQ)
+
+Here's a concise overview of how the retry mechanism is implemented in the service:
+1. **Initial Failure Handling:** When a message fails processing in the main consumer, it's sent to a Dead Letter Queue (DLQ) with a retry count of 0 and timestamp headers.
+2. **Dedicated DLQ Consumer:** A separate consumer continuously processes messages from the DLQ, tracking retry attempts through message headers.
+3. **Retry Limit:** Messages are limited to a maximum of 3 retry attempts (configurable via MAX_RETRY_ATTEMPTS), preventing infinite retry loops.
+4. **Poison Queue:** Messages that fail repeatedly (exceeding the retry limit) are moved to a "poison queue" ({topic}.POISON) for later analysis and are removed from the retry cycle.
+5. **State Preservation:** Each retry attempt updates message headers to track retry count and timestamps, maintaining the message's state between attempts.
+
+---
+
 ## Enterprise Capabilities
 
 ### Rate Limiting with accountId (Implemented)
